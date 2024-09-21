@@ -1,0 +1,74 @@
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.column:hover {
+    box-sizing: 0 8px 12px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
+
+.column .column-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+.column .cards-container .card .tag-container:hover{
+    background-color: #e0f0ff;
+}
+.column .cards-container .card .tag-text:hover {
+    color: #007BFF;
+}
+
+.more-icon-container:hover {
+    color:#007BFF;
+    cursor: pointer;
+}
+
+.column .column-header-left-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.column .column-header-right-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.column .column-title {
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+/* .column .column-title .count {
+    margin-left: 0.5rem;
+    color: #6b6f76;
+} */
+
+.column .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;    
+}
+
+
+
+@media screen and (max-width:700px) {
+    .column {
+        width: calc(100vw - 4rem);
+    }
+    .column .cards-container {
+        width: 100%;
+        overflow-y: auto;
+        flex-direction: row;
+    }
+}
